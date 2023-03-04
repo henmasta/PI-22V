@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+
+
+::-webkit-scrollbar { width: 0;}
+
+*::selection {
+    background: rgb(255, 128, 0);
+}
+
+
+
+@keyframes logo {
+    0% {
+        opacity: 0.1;
+        font-size: 60px;
+    }
+    50% {
+        opacity: 0.5;
+        font-size: 100;
+    }
+    100% {
+        opacity: 1;
+        font-size: 150px;
+    }
+}
+
+#logo {
+
+    font-size: 150px;
+    font-family: 'Oswald', sans-serif;
+
+    color: white;
+    animation: logo 4s ease;
+    text-shadow: black 0 0 10px;
+
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+h1 {
+	font-size: 50px;
+	line-height: 1.125;
+}
+
+.contained {
+
+	margin: 0 auto;
+	width: 90%;
+
+	@media (min-width: 500px){
+		width: 80%;
+	}
+	@media (min-width: 600px){
+		width: 60%;
+	}
+}
+
+footer {
+    
+    color: white;
+    font-family: Georgia, serif;
+    
+    margin-left: 25%;
+	padding: 1em 0;
+	position: relative;
+    
+    width: 50%;
+    height: 200px;
+	box-shadow: 0px -10px 60px rgba(0,0,0,0.25);
+}
+footer h1 {
+
+    margin: 0;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding-bottom: 25px;
+}
+
+header {
+	overflow: hidden;
+	padding-bottom: 55%;
+
+	@media (min-width: 600px){
+		padding-bottom: 50%;
+	}
+	@media (min-width: 700px){
+		padding-bottom: 45%;
+	}
+}
+header img {
+
+    user-select: none;
+    filter: brightness(70%);
+
+	width: 100%;
+
+	max-width: none;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translateX(-50%);
+
+}
+
+header h1 {
+
+    margin: 0;
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+
+    transform: translate(-50%, -50%);
+}
+
+header p {
+
+    margin: 0;
+    position: absolute;
+    
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    
+    transform: translate(-50%, -50%);
+} 
+
+a {
+    color: rgb(160, 158, 158);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: .3s;
+}
+
+a:hover {
+    font-size: 20px;
+    background-size: 100% 2px;
+    color: white;
+}
+
+a:visited {
+    color: white; /* Цвет посещенных ссылок */
+}
+a:active {
+    color: white; /* Цвет активных ссылок */
+}
+
+ul {
+    list-style: none; /*убираем маркеры списка*/
+    margin: 0; /*убираем отступы*/
+    padding-left: 0; /*убираем отступы*/
+}
+a {
+    text-decoration: none; /*убираем подчеркивание текста ссылок*/
+}
+li {
+    float: right; /*Размещаем список горизонтально для реализации меню*/
+    margin-right: 20px; /*Добавляем отступ у пунктов меню*/
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+.post {
+    position: relative;
+    cursor: pointer;
+}
+
+.likes {
+    font-size: 1.5em;
+    margin-top: 8px;
+    color: #3a3a3a;
+}
+.heart-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: drop-shadow(0px 19px 38px rgba(0,0,0, .7));
+    transform-origin: center center;
+    width: 0;
+}
+.animate-like {
+    animation: 2s animateLike ease-in-out forwards;
+}
+@keyframes animateLike {
+    0% {
+        width: 0;
+    }
+    5% {
+        width: 180px;
+    }
+    10% {
+        width: 150px;
+    }
+    20%,
+    35% {
+        width: 160px;
+    }
+    40%,
+    100% {
+        width: 0;
+    }
+}

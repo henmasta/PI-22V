@@ -1,0 +1,40 @@
+.menu {
+    background-color: black;
+    height: 50px;
+}
+
+img {
+    width: 500px; 
+    height: 500px;
+    margin-bottom: 10px;
+    margin-top: 10%;
+    margin-left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+    animation: 2s memes ease-in-out forwards;
+            
+}
+img:hover {
+    width: 700px;
+    height: 700px;
+}
+@keyframes memes {
+    0% {
+        margin-left: 80%;
+    }
+    100% {
+        margin-left: 50%;
+    }
+}
+html {
+    background: rgb(29,253,58);
+    background: linear-gradient(310deg, rgba(29,253,58,1) 0%, rgba(44,147,177,0.9977240896358543) 100%) no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+}
+div {
+    height: 200px;
+}
