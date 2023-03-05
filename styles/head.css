@@ -1,0 +1,48 @@
+
+a {
+    color: rgb(160, 158, 158);
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: .3s;
+}
+
+a:hover {
+    font-size: 20px;
+    background-size: 100% 2px;
+    color: white;
+}
+
+a:visited {
+    color: white;
+}
+a:active {
+    color: white;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.menu {
+    background-color: black;
+    height: 50px;
+}
+
+div {
+    height: 200px;
+}
