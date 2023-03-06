@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Калькулятор</title>
+        <link rel = "stylesheet" href = "styles/styles.css">
+        <link rel = "stylesheet" href = "styles/head.css">
+        <link rel="shortcut icon" href="images/icons/icon.png" type="image/png">
+    </head>
+    <div class = "menu" style = "position: absolute; color: white; width: 99%;">
+
+        <ul>
+            <a href="javascript:history.back()"><img src = "images/icons/arrow-left-bold.png" style = "height: 50px; width: 50px;"></a>
+            <li><a href="calc.html">Калькулятор</a></li>
+            <li><a href="schedule.html">Расписание</a></li>
+            <li><a href="meme.html">Мемы и котики</a></li>
+            <li><a href="https://donntu.ru/" target="_blank">Университет</a></li>
+            <li><a href="index.html">Главная</a></li>
+            </ul>
+    </div>   
+
+    <div style="height: 60px;"></div>
+    <main>
+        <center>
+            <input type="number" id = "x">
+            <input type="number" id = "y">
+            <button onclick="func()">Посчитать</button>
+            <p id = "result"></p>
+
+        </center>
+    </main>
+
+    <script>
+        function func() {
+            var x = Number(document.getElementById("x").value);
+            var y = Number(document.getElementById("y").value);
+
+            if (y !== -5) {
+                z = 7 * Math.pow(x, 4) - Math.sqrt(x + Math.abs(y)) / (y+5);
+                document.getElementById("result").innerHTML = "z = " + z;
+            } else {alert("Введите y не равный -5!");}
+        }
+    </script>
+</html>

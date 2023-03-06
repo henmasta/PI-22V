@@ -1,0 +1,7 @@
+p {font-size: 15px;} 
+tr { border-bottom: 1px solid #ddd; }
+td {font-size: 20px; text-align: center;}
+tr:hover {background-color: #D6EEEE;}
+td:hover {background-color: #95c7c7;}
+table {background-color: white; border-collapse: collapse;}
+table td{border-right:1px #000 solid}

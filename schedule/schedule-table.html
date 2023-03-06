@@ -1,29 +1,39 @@
-<link rel = "stylesheet" href = "../styles/styles.css">
-<link rel = "stylesheet" href = "../styles/head.css">
+<link rel = "stylesheet" href = "../styles/table.css">
+<script>
+    function addStr() {
+    var str = document.getElementById('tableResult');
+    var add = str.insertRow(-1);
 
-<div class = "menu" style = "position: absolute; color: white; width: 99%;">
-    <ul>
-        <a href="javascript:history.back()"><img src = "../images/icons/arrow-left-bold.png" style = "height: 50px; width: 50px;"></a>
-        <li><a href="../schedule.html" target = "_top">Расписание</a></li>
-        <li><a href="../meme.html" target="_top">Мемы и котики</a></li>
-        <li><a href="https://donntu.ru/" target="_blank">Университет</a></li>
-        <li><a href="../index.html" target="_top">Главная</a></li>
-        </ul>
-</div>
+		var addTr = document.createElement("tr");
+    var addTd = document.createElement("td");
+    
+    addTd.innerHTML = "11";
+    addTr.innerHTML = "12";
+    addTr.innerHTML = "13";
+    addTr.appendChild(addTd);
+    str.appendChild(addTr);
 
-<style>
-    p {font-size: 15px;} 
-    tr { border-bottom: 1px solid #ddd; }
-    td {font-size: 20px; text-align: center;}
-    tr:hover {background-color: #D6EEEE;}
-    td:hover {background-color: #95c7c7;}
-    table {background-color: white; border-collapse: collapse;}
-    table td{border-right:1px #000 solid}
 
-</style>
+    let arr = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]];
+    let table = document.querySelector('#table');
 
-<div style = "height: 60px;"></div>
-<table height = "300" width = "1200" align = "center">
+    for (let subArr of arr) {
+        let tr = document.createElement('tr');
+        
+        for (let elem of subArr) {
+            let td = document.createElement('td');
+            td.textContent = elem;
+            tr.appendChild(td);
+        }
+	
+	    table.appendChild(tr);
+    }
+}
+</script>
+<table id="table"></table>
+
+
+<table height = "300" width = "1200" align = "center" id = "tableResult">
     <tr style = "background-color: #fc0;">
         <td></td>
         <td>I</td>
@@ -52,7 +62,7 @@
     <tr>
         <td>Вт</td>
         <td>Русский язык<br><p>пр</p>  <hr> Русский язык<br><p>Лекция</p></td>
-        <td>Программирование в Интернет <br> <p>лб.</p></td>
+        <td>Программирование в Интернете <br> <p>лб.</p></td>
         <td>Физическая культура</td>
         <td>История России<br> <p>Лекция</p></td>
         <td> </td>
@@ -69,20 +79,30 @@
     </tr>
     <tr>
         <td>Чт</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
+        <td> </td>
+        <td> </td>
+        <td>Физическая культура</td>
+        <td>Программирование в Интернете <br><p>Лекция</p></td>
+        <td>История России <br><p>пр.</p></td>
 
     </tr>
     <tr>
         <td>Пт</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
-        <td>null</td>
+        <td>ООП <br><p>Лекция</p><hr>ООП <br><p>лб. 1 подгруппа</p></td>
+        <td>Математичексий анализ <br> <p>пр.</p></td>
+        <td><hr>ООП <br><p>лб. 2 подгруппа</p></td>
+        <td> </td>
     </tr>
 
 </table>
+
+<button onclick="addStr()">Добавить ячейку</button>
+
+<br>
+<form>
+    <div>
+        <input type = "text" id = "id" name = "id">
+        <input type = "reset" value = "Сброс">
+        <input type = "submit" value = "Отправить">
+    </div>
+</form>
